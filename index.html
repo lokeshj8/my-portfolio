@@ -158,25 +158,65 @@
   <button id="scrollToTopBtn" title="Go to top">↑</button>
 
   <!-- Contact Form -->
-  <div class="contact-form-section">
-    <h2 class="contact-heading">Contact Me</h2>
-    <form class="contact-form" action="https://formspree.io/f/xqabjgrq" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <textarea name="message" placeholder="Your Message" required></textarea>
-      <button type="submit" class="btn">Send Message</button>
-    </form>
-  </div>
 
-  <!-- Social Icons -->
-  <div class="social-icons">
-    <a href="https://github.com/yourusername" target="_blank">
-      <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" width="32" />
-    </a>
-    <a href="https://linkedin.com/in/yourprofile" target="_blank">
-      <img src="https://cdn-icons-png.flaticon.com/512/733/733561.png" width="32" />
-    </a>
-  </div>
+<div class="contact-form-section">
+  <h2 class="contact-heading">Contact Me</h2>
+  <form id="contact-form" class="contact-form">
+    <input type="text" name="name" placeholder="Your Name" required minlength="3" maxlength="30" />
+    <input type="email" name="email" placeholder="Your Email" required />
+    <textarea name="message" placeholder="Your Message" required minlength="10"></textarea>
+    <button type="submit" class="btn">Send Message</button>
+  </form>
+  <p id="form-message" style="text-align:center; margin-top: 10px; font-weight: bold;"></p>
+</div>
+
+<!-- Social Icons -->
+<div class="social-icons">
+  <a href="https://github.com/lokeshj8" target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" width="32" />
+  </a>
+  <a href="https://www.linkedin.com/in/jejappagarilokesh" target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733561.png" width="32" />
+  </a>
+</div>
+
+<!-- Existing script.js -->
+<script src="script.js"></script>
+
+<!-- ✅ New JS for Form Handling -->
+<script>
+  const form = document.getElementById("contact-form");
+  const msg = document.getElementById("form-message");
+
+  form.addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+
+    try {
+      const res = await fetch("https://formspree.io/f/xqabjgrq", {
+        method: "POST",
+        body: formData,
+        headers: {
+          Accept: "application/json",
+        },
+      });
+
+      if (res.ok) {
+        msg.style.color = "green";
+        msg.textContent = "Thanks! Your message has been sent successfully.";
+        form.reset();
+      } else {
+        msg.style.color = "red";
+        msg.textContent = "Something went wrong. Please try again.";
+      }
+    } catch (err) {
+      msg.style.color = "red";
+      msg.textContent = "Network error. Please try later.";
+    }
+  });
+</script>
+
 
   <script src="script.js"></script>
 </body>
