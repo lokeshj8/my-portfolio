@@ -1,333 +1,292 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Lokesh Jejappagari | Mechanical Design Engineer</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lokesh Jejappagari | Mechanical Design Engineer</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
-  <style>
+<style>
 
-/* ---------- GLOBAL ---------- */
+/* ===== GLOBAL ===== */
 
-body {
-  margin: 0;
-  font-family: 'Inter', sans-serif;
-  background: linear-gradient(-45deg, #f8fafc, #eef2f7, #f1f5f9, #ffffff);
-  background-size: 400% 400%;
-  animation: gradientMove 15s ease infinite;
-  color: #0A192F;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
-/* Smooth gradient animation */
-@keyframes gradientMove {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+body{
+  font-family:'Inter', sans-serif;
+  background:#0f172a;
+  color:#e2e8f0;
+  overflow-x:hidden;
+  scroll-behavior:smooth;
 }
 
-/* Smooth scroll */
-html {
-  scroll-behavior: smooth;
+/* ===== NAVBAR ===== */
+
+nav{
+  position:fixed;
+  width:100%;
+  top:0;
+  background:rgba(15,23,42,0.9);
+  backdrop-filter:blur(8px);
+  padding:18px 0;
+  z-index:1000;
 }
 
-.container {
-  width: 85%;
-  max-width: 1100px;
-  margin: auto;
-  padding: 80px 0;
+.nav-container{
+  width:85%;
+  margin:auto;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
 }
 
-/* ---------- HEADINGS ---------- */
-
-h1, h2 {
-  margin-bottom: 20px;
+.logo{
+  font-weight:700;
+  font-size:20px;
+  color:#38bdf8;
 }
 
-h1 {
-  font-size: 42px;
-  font-weight: 700;
+.nav-links a{
+  color:#e2e8f0;
+  text-decoration:none;
+  margin-left:25px;
+  font-weight:500;
+  transition:0.3s;
 }
 
-h2 {
-  font-size: 28px;
-  border-left: 4px solid #0077B6;
-  padding-left: 10px;
+.nav-links a:hover{
+  color:#38bdf8;
 }
 
-/* ---------- HERO ---------- */
+/* ===== HERO ===== */
 
-.hero {
-  text-align: center;
-  padding: 120px 0;
-  background: #0A192F;
-  color: white;
+.hero{
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:0 20px;
 }
 
-.hero-title {
-  font-size: 20px;
-  margin-top: 10px;
-  color: #90E0EF;
+.hero h1{
+  font-size:48px;
+  margin-bottom:15px;
 }
 
-.hero-sub {
-  margin-top: 15px;
-  font-size: 16px;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
-  color: #CBD5E1;
+.hero span{
+  color:#38bdf8;
 }
 
-/* ---------- BUTTONS ---------- */
-
-.btn {
-  display: inline-block;
-  margin: 20px 10px 0;
-  padding: 12px 24px;
-  background: #0077B6;
-  color: white;
-  text-decoration: none;
-  font-weight: 600;
-  border-radius: 6px;
-  transition: all 0.3s ease;
+.hero p{
+  max-width:700px;
+  margin-top:15px;
+  color:#94a3b8;
 }
 
-.btn:hover {
-  background: #005f8e;
-  transform: translateY(-3px);
-  box-shadow: 0 10px 25px rgba(0,119,182,0.3);
+.btn{
+  margin-top:25px;
+  padding:12px 28px;
+  background:#38bdf8;
+  color:#0f172a;
+  text-decoration:none;
+  border-radius:6px;
+  font-weight:600;
+  transition:0.3s;
 }
 
-.btn-outline {
-  border: 2px solid #0077B6;
-  color: #0077B6;
-  padding: 10px 22px;
-  text-decoration: none;
-  border-radius: 6px;
-  font-weight: 600;
-  transition: all 0.3s ease;
+.btn:hover{
+  transform:translateY(-3px);
+  box-shadow:0 10px 30px rgba(56,189,248,0.3);
 }
 
-.btn-outline:hover {
-  background: #0077B6;
-  color: white;
-  transform: translateY(-3px);
+/* ===== SECTIONS ===== */
+
+section{
+  padding:100px 0;
+  width:85%;
+  margin:auto;
+  opacity:0;
+  transform:translateY(40px);
+  transition:all 1s ease;
 }
 
-/* ---------- GRID ---------- */
-
-.grid-2 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
+section.show{
+  opacity:1;
+  transform:translateY(0);
 }
 
-/* ---------- CARD ---------- */
-
-.card {
-  background: white;
-  padding: 25px;
-  border-radius: 10px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-  transition: all 0.4s ease;
+h2{
+  margin-bottom:40px;
+  font-size:28px;
+  border-left:4px solid #38bdf8;
+  padding-left:10px;
 }
 
-.card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+/* ===== CARDS ===== */
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:30px;
 }
 
-/* ---------- FADE IN ANIMATION ---------- */
-
-section {
-  opacity: 0;
-  transform: translateY(40px);
-  animation: fadeUp 1s ease forwards;
+.card{
+  background:rgba(30,41,59,0.6);
+  padding:25px;
+  border-radius:12px;
+  backdrop-filter:blur(10px);
+  transition:0.4s;
 }
 
-section:nth-child(1) { animation-delay: 0.2s; }
-section:nth-child(2) { animation-delay: 0.4s; }
-section:nth-child(3) { animation-delay: 0.6s; }
-section:nth-child(4) { animation-delay: 0.8s; }
-
-@keyframes fadeUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 20px 40px rgba(0,0,0,0.4);
 }
 
-/* ---------- FOOTER ---------- */
+/* ===== PROGRESS BARS ===== */
 
-.footer {
-  text-align: center;
-  padding: 40px;
-  background: #0A192F;
-  color: white;
-  margin-top: 50px;
+.progress{
+  background:#1e293b;
+  height:8px;
+  border-radius:6px;
+  margin-top:10px;
 }
 
-/* ---------- RESPONSIVE ---------- */
+.progress-bar{
+  height:8px;
+  background:#38bdf8;
+  border-radius:6px;
+}
+
+/* ===== FOOTER ===== */
+
+footer{
+  text-align:center;
+  padding:40px;
+  background:#0f172a;
+  color:#64748b;
+}
+
+/* ===== RESPONSIVE ===== */
 
 @media(max-width:768px){
-  .grid-2{
-    grid-template-columns: 1fr;
-  }
+  .hero h1{font-size:32px;}
 }
 
 </style>
-
-  
 </head>
 <body>
 
-<!-- HERO SECTION -->
-<section class="hero">
+<!-- NAVBAR -->
+<nav>
+  <div class="nav-container">
+    <div class="logo">Lokesh</div>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
   <h1>Lokesh Jejappagari</h1>
-  <p class="hero-title">Mechanical Design Engineer</p>
-  <p class="hero-sub">
-    Specializing in Product Design, GD&T Implementation, and Thermal Analysis 
-    with hands-on experience in Automotive Assembly and Manufacturing Systems.
-  </p>
-  <a href="resume/GET_MechanicalEngineer_Lokesh.pdf" target="_blank" class="btn">View Resume</a>
-  <a href="#contact" class="btn-outline">Contact Me</a>
-</section>
+  <h3><span id="typing"></span></h3>
+  <p>Mechanical Engineer specializing in Product Design, GD&T Implementation and Thermal Analysis with Automotive Assembly Experience.</p>
+  <a href="#" class="btn">View Resume</a>
+</div>
 
-<!-- PROFESSIONAL SUMMARY -->
-<section class="container">
+<!-- ABOUT -->
+<section id="about">
   <h2>Professional Summary</h2>
-  <p>
-    Mechanical Engineering graduate with strong expertise in 3D modeling, 
-    manufacturing processes, and simulation-driven design validation. 
-    Experienced in automotive assembly operations and GD&T application 
-    in industrial environments. Passionate about product development, 
-    engineering analysis, and delivering optimized mechanical solutions.
-  </p>
+  <p>Mechanical Engineering graduate with strong expertise in CAD modeling, GD&T application and simulation-driven design validation. Experienced in automotive manufacturing and assembly operations.</p>
 </section>
 
-<!-- CORE COMPETENCIES -->
-<section class="container">
-  <h2>Core Engineering Competencies</h2>
-  <div class="grid-2">
-    <div class="card">Product Design & Development</div>
-    <div class="card">GD&T Implementation</div>
-    <div class="card">Thermal & Structural Analysis</div>
-    <div class="card">Automotive Assembly Systems</div>
-    <div class="card">Manufacturing Process Optimization</div>
-    <div class="card">Engineering Documentation</div>
-  </div>
-</section>
-
-<!-- TOOLS -->
-<section class="container">
-  <h2>Design Tools & Software</h2>
-  <div class="grid-2">
+<!-- SKILLS -->
+<section id="skills">
+  <h2>Core Skills</h2>
+  <div class="grid">
     <div class="card">
-      <h3>CAD</h3>
-      <p>CREO, CATIA, SolidWorks, Siemens NX</p>
+      SolidWorks
+      <div class="progress"><div class="progress-bar" style="width:90%"></div></div>
     </div>
-
     <div class="card">
-      <h3>Simulation</h3>
-      <p>ANSYS Workbench</p>
+      CATIA
+      <div class="progress"><div class="progress-bar" style="width:85%"></div></div>
     </div>
-
     <div class="card">
-      <h3>Drafting</h3>
-      <p>AutoCAD (2D Drafting)</p>
+      ANSYS
+      <div class="progress"><div class="progress-bar" style="width:80%"></div></div>
     </div>
-
     <div class="card">
-      <h3>Data & Reporting</h3>
-      <p>MS Excel, Power BI</p>
+      GD&T
+      <div class="progress"><div class="progress-bar" style="width:88%"></div></div>
     </div>
-  </div>
-</section>
-
-<!-- INDUSTRIAL EXPERIENCE -->
-<section class="container">
-  <h2>Industrial Experience</h2>
-
-  <div class="card">
-    <h3>Kia Motors – Assembly Trainee</h3>
-    <ul>
-      <li>Worked in vehicle assembly line ensuring dimensional accuracy and quality compliance.</li>
-      <li>Assisted in process inspection and workflow optimization.</li>
-      <li>Gained exposure to automotive manufacturing systems and lean practices.</li>
-    </ul>
-  </div>
-
-  <br>
-
-  <div class="card">
-    <h3>RV Machine Tools – Design Intern</h3>
-    <ul>
-      <li>Applied GD&T principles in engineering drawings.</li>
-      <li>Developed 2D drafting models using AutoCAD.</li>
-      <li>Supported design modifications and documentation processes.</li>
-    </ul>
   </div>
 </section>
 
 <!-- PROJECTS -->
-<section class="container">
-  <h2>Key Engineering Projects</h2>
-
-  <div class="card">
-    <h3>Conversion of Plastic Waste into Fuel</h3>
-    <ul>
-      <li>Designed thermal pyrolysis system model.</li>
-      <li>Analyzed heat transfer efficiency and fuel output characteristics.</li>
-      <li>Focused on sustainable energy conversion techniques.</li>
-    </ul>
+<section id="projects">
+  <h2>Key Projects</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Plastic Waste to Fuel</h3>
+      <p>Designed thermal pyrolysis model and analyzed heat transfer efficiency.</p>
+    </div>
+    <div class="card">
+      <h3>Pulsating Heat Pipe</h3>
+      <p>Performed parametric thermal simulations using ANSYS Workbench.</p>
+    </div>
   </div>
-
-  <br>
-
-  <div class="card">
-    <h3>Parametric Analysis of Pulsating Heat Pipe</h3>
-    <ul>
-      <li>Conducted thermal simulations using ANSYS Workbench.</li>
-      <li>Compared temperature distribution under varying parameters.</li>
-      <li>Optimized heat dissipation performance.</li>
-    </ul>
-  </div>
-</section>
-
-<!-- CERTIFICATIONS -->
-<section class="container">
-  <h2>Certifications</h2>
-  <ul>
-    <li>NPTEL – Python for Data Science</li>
-    <li>Certified in GD&T Concepts</li>
-    <li>AutoCAD & Design Tools Training</li>
-    <li>Participation in Technical Symposiums</li>
-  </ul>
 </section>
 
 <!-- CONTACT -->
-<section class="container" id="contact">
+<section id="contact">
   <h2>Contact</h2>
   <p>Email: jlokesh2002@gmail.com</p>
   <p>Phone: 7013428191</p>
-  <p>
-    LinkedIn: <a href="https://www.linkedin.com/in/jejappagarilokesh" target="_blank">linkedin.com/in/jejappagarilokesh</a>
-  </p>
-  <p>
-    GitHub: <a href="https://github.com/lokeshj8" target="_blank">github.com/lokeshj8</a>
-  </p>
 </section>
 
-<!-- FOOTER -->
-<div class="footer">
+<footer>
   © 2026 Lokesh Jejappagari | Mechanical Design Engineer
-</div>
+</footer>
+
+<script>
+
+/* Typing Effect */
+const text = "Mechanical Design Engineer";
+let i = 0;
+function typing(){
+  if(i < text.length){
+    document.getElementById("typing").innerHTML += text.charAt(i);
+    i++;
+    setTimeout(typing,60);
+  }
+}
+typing();
+
+/* Scroll Reveal */
+const sections = document.querySelectorAll("section");
+
+window.addEventListener("scroll", ()=>{
+  sections.forEach(sec=>{
+    const top = sec.getBoundingClientRect().top;
+    if(top < window.innerHeight - 100){
+      sec.classList.add("show");
+    }
+  });
+});
+
+</script>
 
 </body>
 </html>
-
-
-
