@@ -1,241 +1,272 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-  <title>Lokesh Jejappagari | Portfolio</title>
-  <link rel="stylesheet" href="css/style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <title>Lokesh Jejappagari | Mechanical Design Engineer</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #F8FAFC;
+      color: #0A192F;
+    }
+
+    .container {
+      width: 85%;
+      max-width: 1100px;
+      margin: auto;
+      padding: 60px 0;
+    }
+
+    h1, h2 {
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 42px;
+      font-weight: 700;
+    }
+
+    h2 {
+      font-size: 28px;
+      border-left: 4px solid #0077B6;
+      padding-left: 10px;
+    }
+
+    p {
+      line-height: 1.7;
+      font-size: 16px;
+      color: #334155;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 100px 0;
+      background-color: #0A192F;
+      color: white;
+    }
+
+    .hero h1 {
+      color: white;
+    }
+
+    .hero-title {
+      font-size: 20px;
+      margin-top: 10px;
+      color: #90E0EF;
+    }
+
+    .hero-sub {
+      margin-top: 15px;
+      font-size: 16px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      color: #CBD5E1;
+    }
+
+    .btn {
+      display: inline-block;
+      margin: 20px 10px 0;
+      padding: 12px 24px;
+      background: #0077B6;
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 5px;
+    }
+
+    .btn-outline {
+      border: 2px solid #0077B6;
+      color: #0077B6;
+      padding: 10px 22px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: 600;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 8px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 40px;
+      background: #0A192F;
+      color: white;
+    }
+
+    @media(max-width:768px){
+      .grid-2{
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 <body>
-  <button id="themeToggle" class="theme-btn">🌗 Toggle Theme</button>
 
-  
-  <!-- Hero / Home -->
-  <section class="home">
-    <lottie-player 
-      src="https://assets7.lottiefiles.com/packages/lf20_kyu7xb1v.json"
-      background="transparent"
-      speed="1"
-      style="width: 300px; height: 300px; margin: auto;"
-      loop
-      autoplay>
-    </lottie-player>
-    <div class="container">
-      <h1>Hi, I'm <span class="name">Lokesh Jejappagari</span> 👋</h1>
-      <p class="tagline">Mechanical Design Engineer | CAD Specialist | GD&T | ANSYS Enthusiast</p>
-      <div class="buttons">
-        <a href="resume/GET_MechanicalEngineer_Lokesh.pdf" class="btn" download>Download Resume</a>
-        <a href="#projects" class="btn-outline">View Projects</a>
-      </div>
-      <div class="hero-socials">
-        <a href="https://github.com/lokeshj8" target="_blank" class="social-icon" title="GitHub">
-          <svg width="36" height="36" viewBox="0 0 24 24" fill="none"><path d="M12 2C6.48 2 2 6.58 2 12.26c0 4.49 2.87 8.3 6.84 9.64.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.7-2.78.62-3.37-1.36-3.37-1.36-.45-1.18-1.1-1.5-1.1-1.5-.9-.63.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.7 0 0 .84-.28 2.75 1.05A9.38 9.38 0 0 1 12 6.84c.85.004 1.71.12 2.51.35 1.91-1.33 2.75-1.05 2.75-1.05.55 1.4.2 2.44.1 2.7.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.07.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.58.69.48A10.01 10.01 0 0 0 22 12.26C22 6.58 17.52 2 12 2Z" fill="#181717"/></svg>
-        </a>
-        <a href="https://www.linkedin.com/in/jejappagarilokesh" target="_blank" class="social-icon" title="LinkedIn">
-          <svg width="36" height="36" viewBox="0 0 24 24" fill="none"><rect width="24" height="24" rx="6" fill="#0A66C2"/><path d="M7.5 8.5A1.5 1.5 0 1 1 7.5 5.5a1.5 1.5 0 0 1 0 3Zm-1.25 2.25h2.5v7.5h-2.5v-7.5ZM12.25 10.75h2.4v1.02h.03c.33-.63 1.13-1.29 2.32-1.29 2.48 0 2.94 1.63 2.94 3.75v4.27h-2.5v-3.78c0-.9-.02-2.06-1.25-2.06-1.25 0-1.44.97-1.44 1.99v3.85h-2.5v-7.75Z" fill="#fff"/></svg>
-        </a>
-      </div>
-    </div>
-  </section>
+<!-- HERO SECTION -->
+<section class="hero">
+  <h1>Lokesh Jejappagari</h1>
+  <p class="hero-title">Mechanical Design Engineer</p>
+  <p class="hero-sub">
+    Specializing in Product Design, GD&T Implementation, and Thermal Analysis 
+    with hands-on experience in Automotive Assembly and Manufacturing Systems.
+  </p>
+  <a href="resume/GET_MechanicalEngineer_Lokesh.pdf" target="_blank" class="btn">View Resume</a>
+  <a href="#contact" class="btn-outline">Contact Me</a>
+</section>
 
-  <!-- About Me -->
-  <section class="about" id="about">
-    <div class="container about-flex">
-      <img src="resume/photo.jpg" alt="Lokesh Jejappagari" class="profile-img" />
-      <div class="about-content">
-        <h2>About Me</h2>
-       <p>
-Dedicated and detail-oriented Mechanical Engineering graduate with strong knowledge in design engineering, 3D modeling, and manufacturing processes. Skilled in CREO, CATIA, SolidWorks, AutoCAD, and ANSYS Workbench. Passionate about product design, thermal analysis, and real-world industrial problem solving. Currently seeking an entry-level Mechanical Design Engineer position.
-</p>
+<!-- PROFESSIONAL SUMMARY -->
+<section class="container">
+  <h2>Professional Summary</h2>
+  <p>
+    Mechanical Engineering graduate with strong expertise in 3D modeling, 
+    manufacturing processes, and simulation-driven design validation. 
+    Experienced in automotive assembly operations and GD&T application 
+    in industrial environments. Passionate about product development, 
+    engineering analysis, and delivering optimized mechanical solutions.
+  </p>
+</section>
 
-        <h3>🎓 Education</h3>
-        <p><strong>Sree Vidyanikethan Engineering College</strong><br />
-        B.Tech – Mechanical (2019–2023)<br />
-        CGPA: 7.49</p>
+<!-- CORE COMPETENCIES -->
+<section class="container">
+  <h2>Core Engineering Competencies</h2>
+  <div class="grid-2">
+    <div class="card">Product Design & Development</div>
+    <div class="card">GD&T Implementation</div>
+    <div class="card">Thermal & Structural Analysis</div>
+    <div class="card">Automotive Assembly Systems</div>
+    <div class="card">Manufacturing Process Optimization</div>
+    <div class="card">Engineering Documentation</div>
+  </div>
+</section>
 
-        <h3>🧠 Skills</h3>
-        <ul class="skills">
-          <ul class="skills">
-  <li>CREO Parametric</li>
-  <li>CATIA</li>
-  <li>SolidWorks</li>
-  <li>AutoCAD (2D Drafting)</li>
-  <li>ANSYS Workbench</li>
-  <li>GD&T</li>
-  <li>Siemens NX</li>
-  <li>Manufacturing Processes</li>
-  <li>MS Excel</li>
-  <li>Power BI</li>
-</ul>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section class="experience" id="experience">
-  <div class="container">
-    <h2>Industrial Experience</h2>
-    <div class="achievement-card">
-      🏭 Trainee – Assembly Department | Kia Motors  
-      <br>Worked in vehicle assembly process and quality inspection.
+<!-- TOOLS -->
+<section class="container">
+  <h2>Design Tools & Software</h2>
+  <div class="grid-2">
+    <div class="card">
+      <h3>CAD</h3>
+      <p>CREO, CATIA, SolidWorks, Siemens NX</p>
     </div>
 
-    <div class="achievement-card">
-      🛠️ Internship – RV Machine Tools  
-      <br>Worked on GD&T concepts and AutoCAD drafting.
+    <div class="card">
+      <h3>Simulation</h3>
+      <p>ANSYS Workbench</p>
+    </div>
+
+    <div class="card">
+      <h3>Drafting</h3>
+      <p>AutoCAD (2D Drafting)</p>
+    </div>
+
+    <div class="card">
+      <h3>Data & Reporting</h3>
+      <p>MS Excel, Power BI</p>
     </div>
   </div>
 </section>
 
-  <!-- Projects -->
-  <section class="projects" id="projects">
-    <div class="container">
-      <h2>Projects</h2>
-      <div class="projects-grid">
-        <!-- Existing Projects (keep as-is) -->
-        <!-- ADDITIONAL PROJECTS BELOW -->
+<!-- INDUSTRIAL EXPERIENCE -->
+<section class="container">
+  <h2>Industrial Experience</h2>
 
-        <!-- Eye Care Management System -->
-       <div class="project-square">
-  <div class="project-front">
-    <span class="project-icon">🔥</span>
-    <span class="project-title">Plastic Waste Into Fuel</span>
-  </div>
-  <div class="project-back">
-    <span class="project-domain">Major Academic Project</span>
-    <span class="project-title">Conversion of Plastic Waste into Fuel</span>
-    <span class="project-tech">Thermal Pyrolysis Process</span>
-    <span class="project-summary">
-      Developed a system to convert plastic waste into usable fuel using pyrolysis process.
-    </span>
+  <div class="card">
+    <h3>Kia Motors – Assembly Trainee</h3>
     <ul>
-      <li>Studied heat transfer and combustion principles.</li>
-      <li>Analyzed fuel output efficiency.</li>
-      <li>Focused on sustainable energy solutions.</li>
+      <li>Worked in vehicle assembly line ensuring dimensional accuracy and quality compliance.</li>
+      <li>Assisted in process inspection and workflow optimization.</li>
+      <li>Gained exposure to automotive manufacturing systems and lean practices.</li>
     </ul>
   </div>
-</div>
-        <!-- Weather App -->
-        <div class="project-square">
-          <div class="project-front">
-            <span class="project-icon">🌤️</span>
-            <span class="project-title">Weather Forecast App</span>
-          </div>
-          <div class="project-back">
-            <span class="project-domain">Frontend / API</span>
-            <span class="project-title">Real-Time Weather App</span>
-            <span class="project-tech">HTML, CSS, JavaScript, OpenWeatherMap API</span>
-            <span class="project-summary">A responsive web app to check live weather data for any location.</span>
-            <ul>
-              <li>Uses OpenWeatherMap API.</li>
-              <li>Shows temperature, humidity, wind speed.</li>
-              <li>Live city-based search feature.</li>
-            </ul>
-          </div>
-        </div>
-<div class="project-square">
-  <div class="project-front">
-    <span class="project-icon">🌡️</span>
-    <span class="project-title">Pulsating Heat Pipe</span>
-  </div>
-  <div class="project-back">
-    <span class="project-domain">Thermal Engineering Project</span>
-    <span class="project-title">Parametric Analysis of Pulsating Heat Pipe</span>
-    <span class="project-tech">ANSYS Workbench</span>
-    <span class="project-summary">
-      Conducted thermal analysis to study heat transfer efficiency under different parameters.
-    </span>
+
+  <br>
+
+  <div class="card">
+    <h3>RV Machine Tools – Design Intern</h3>
     <ul>
-      <li>Simulated heat transfer conditions.</li>
-      <li>Compared temperature distribution.</li>
-      <li>Improved performance efficiency.</li>
+      <li>Applied GD&T principles in engineering drawings.</li>
+      <li>Developed 2D drafting models using AutoCAD.</li>
+      <li>Supported design modifications and documentation processes.</li>
     </ul>
   </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="container">
+  <h2>Key Engineering Projects</h2>
+
+  <div class="card">
+    <h3>Conversion of Plastic Waste into Fuel</h3>
+    <ul>
+      <li>Designed thermal pyrolysis system model.</li>
+      <li>Analyzed heat transfer efficiency and fuel output characteristics.</li>
+      <li>Focused on sustainable energy conversion techniques.</li>
+    </ul>
+  </div>
+
+  <br>
+
+  <div class="card">
+    <h3>Parametric Analysis of Pulsating Heat Pipe</h3>
+    <ul>
+      <li>Conducted thermal simulations using ANSYS Workbench.</li>
+      <li>Compared temperature distribution under varying parameters.</li>
+      <li>Optimized heat dissipation performance.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section class="container">
+  <h2>Certifications</h2>
+  <ul>
+    <li>NPTEL – Python for Data Science</li>
+    <li>Certified in GD&T Concepts</li>
+    <li>AutoCAD & Design Tools Training</li>
+    <li>Participation in Technical Symposiums</li>
+  </ul>
+</section>
+
+<!-- CONTACT -->
+<section class="container" id="contact">
+  <h2>Contact</h2>
+  <p>Email: jlokesh2002@gmail.com</p>
+  <p>Phone: 7013428191</p>
+  <p>
+    LinkedIn: <a href="https://www.linkedin.com/in/jejappagarilokesh" target="_blank">linkedin.com/in/jejappagarilokesh</a>
+  </p>
+  <p>
+    GitHub: <a href="https://github.com/lokeshj8" target="_blank">github.com/lokeshj8</a>
+  </p>
+</section>
+
+<!-- FOOTER -->
+<div class="footer">
+  © 2026 Lokesh Jejappagari | Mechanical Design Engineer
 </div>
-        
-  <!-- Achievements -->
- <div class="achievement-card">📜 NPTEL Certification – Python for Data Science</div>
-<div class="achievement-card">📐 Certified in GD&T Concepts</div>
-<div class="achievement-card">🛠️ AutoCAD & Design Tools Training</div>
-<div class="achievement-card">🏅 Participated in Technical Symposiums</div>
 
-  <!-- Background Blobs -->
-  <div class="blob blob1"></div>
-  <div class="blob blob2"></div>
-  <div class="blob blob3"></div>
-  <canvas id="sparkle-bg"></canvas>
-
-  <!-- Scroll to Top Button -->
-  <button id="scrollToTopBtn" title="Go to top">↑</button>
-
-  <!-- Contact Form -->
-
-<div class="contact-form-section">
-  <h2 class="contact-heading">Contact Me</h2>
-  <form id="contact-form" class="contact-form">
-    <input type="text" name="name" placeholder="Your Name" required minlength="3" maxlength="30" />
-    <input type="email" name="email" placeholder="Your Email" required />
-    <textarea name="message" placeholder="Your Message" required minlength="10"></textarea>
-    <button type="submit" class="btn">Send Message</button>
-  </form>
-  <p id="form-message" style="text-align:center; margin-top: 10px; font-weight: bold;"></p>
-</div>
-
-<!-- Social Icons -->
-<div class="social-icons">
-  <a href="https://github.com/lokeshj8" target="_blank">
-    <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" width="32" />
-  </a>
-  <a href="https://www.linkedin.com/in/jejappagarilokesh" target="_blank">
-    <img src="https://cdn-icons-png.flaticon.com/512/733/733561.png" width="32" />
-  </a>
-</div>
-
-<!-- Existing script.js -->
-<script src="script.js"></script>
-
-<!-- ✅ New JS for Form Handling -->
-<script>
-  const form = document.getElementById("contact-form");
-  const msg = document.getElementById("form-message");
-
-  form.addEventListener("submit", async function (e) {
-    e.preventDefault();
-
-    const formData = new FormData(form);
-
-    try {
-      const res = await fetch("https://formspree.io/f/xqabjgrq", {
-        method: "POST",
-        body: formData,
-        headers: {
-          Accept: "application/json",
-        },
-      });
-
-      if (res.ok) {
-        msg.style.color = "green";
-        msg.textContent = "Thanks! Your message has been sent successfully.";
-        form.reset();
-      } else {
-        msg.style.color = "red";
-        msg.textContent = "Something went wrong. Please try again.";
-      }
-    } catch (err) {
-      msg.style.color = "red";
-      msg.textContent = "Network error. Please try later.";
-    }
-  });
-</script>
-
-
-  <script src="script.js"></script>
 </body>
 </html>
-
-
-
-
